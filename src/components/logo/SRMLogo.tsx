@@ -14,7 +14,7 @@ const SRMLogo: React.FC<LogoProps> = ({
   const sizeClasses = {
     sm: 'h-8',
     md: 'h-12',
-    lg: 'h-30',
+    lg: 'h-25',
   };
 
   const textColor = variant === 'white' ? 'text-white' : 'text-srm-blue';
