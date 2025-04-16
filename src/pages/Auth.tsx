@@ -9,7 +9,7 @@ const Auth = () => {
       <div className="w-full max-w-md px-8 py-10 bg-white rounded-2xl shadow-lg animate-fade-in">
         <div className="mb-8">
           <SRMLogo size="lg" className="mx-auto mb-4" />
-          <h2 className="text-2xl font-medium text-center text-gray-800">Effortless Parking</h2>
+          <h2 className="text-2xl font-medium text-center text-gray-800">Check . Book . Park</h2>
           <p className="text-sm text-center text-gray-500 mt-2">Park Under 1 min</p>
         </div>
         <AuthForm />
