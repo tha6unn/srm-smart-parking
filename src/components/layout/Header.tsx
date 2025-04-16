@@ -42,8 +42,7 @@ const Header: React.FC<HeaderProps> = ({
           {title ? (
             <h1 className="font-semibold text-lg">{title}</h1>
           ) : (
-            <SRMLogo size="hg"/>
-
+            <SRMLogo size="md" />
           )}
         </div>
         
