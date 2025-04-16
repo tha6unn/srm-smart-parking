@@ -14,7 +14,7 @@ const SRMLogo: React.FC<LogoProps> = ({
   const sizeClasses = {
     sm: 'h-8',
     md: 'h-12',
-    lg: 'h-15',
+    lg: 'h-13',
   };
 
   const textColor = variant === 'white' ? 'text-white' : 'text-srm-blue';
@@ -22,7 +22,7 @@ const SRMLogo: React.FC<LogoProps> = ({
   return (
     <div
       className={`flex justify-center items-center w-full ${className}`}
-      style={{ minHeight: size === 'sm' ? '2rem' : size === 'lg' ? '4rem' : '3rem' }}
+      style={{ minHeight: size === 'sm' ? '2rem' : size === 'lg' ? '3rem' : '2rem' }}
     >
       <div className={`relative flex items-center ${sizeClasses[size]}`}>
         {/* Logo Image */}
