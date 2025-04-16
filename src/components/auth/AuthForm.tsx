@@ -54,7 +54,7 @@ const AuthForm = () => {
 
   return (
     <div className="w-full max-w-md mx-auto animate-fade-in">
-     
+     <SRMLogo className="flex-shrink-0 mr-4" size="lg" />
 
       
       <div className="bg-white p-6 rounded-xl shadow-sm border">
