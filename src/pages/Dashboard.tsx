@@ -27,8 +27,8 @@ const Dashboard = () => {
       id: '3',
       name: 'Tech Park Avenue',
       totalSlots: 80,
-      occupiedSlots: 35,
-      status: 'available'
+      occupiedSlots: 80,
+      status: 'full'
     },
     {
       id: '4',

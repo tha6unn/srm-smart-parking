@@ -25,7 +25,7 @@ const SplashScreen = () => {
         
         {/* Tagline */}
         <p className="text-white text-xl font-light mb-16">
-          Smart Parking Made Easy
+          Experience the Smart Parking of SRM IST
         </p>
         
         {/* Loading animation */}
