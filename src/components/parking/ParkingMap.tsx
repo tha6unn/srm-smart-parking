@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Check } from 'lucide-react';
+import { Check, Car } from 'lucide-react';
 
 export interface ParkingSlot {
   id: string;
@@ -83,7 +83,7 @@ const ParkingMap: React.FC<ParkingMapProps> = ({
             <div 
               key={slot.id}
               className={cn(
-                "absolute border-2 rounded transition-all cursor-pointer",
+                "absolute border-2 rounded transition-all cursor-pointer flex items-center justify-center",
                 getCarColor(slot.status),
                 isSelected && "ring-2 ring-srm-blue"
               )}
@@ -96,6 +96,7 @@ const ParkingMap: React.FC<ParkingMapProps> = ({
               }}
               onClick={() => slot.status === 'available' && onSelectSlot(slot.id)}
             >
+              <Car size={14} className="text-white" />
               <div className="absolute bottom-1 right-1 text-[10px] font-semibold text-white">
                 {slot.slotNumber}
               </div>

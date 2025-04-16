@@ -7,6 +7,8 @@ import FloorSelector from '@/components/parking/FloorSelector';
 import ParkingMap, { ParkingSlot } from '@/components/parking/ParkingMap';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import { Car, Route } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ParkingDetails = () => {
   const { blockId } = useParams<{ blockId: string }>();
@@ -66,6 +68,17 @@ const ParkingDetails = () => {
       <Header title="Select Parking Slot" showBackButton showInfoButton />
       
       <main className="p-4">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-lg font-medium">{blockId || 'Main'} Block</h2>
+          <Link 
+            to={`/navigation/${blockId}`} 
+            className="flex items-center gap-2 text-sm text-srm-blue font-medium bg-srm-blue/10 px-3 py-1.5 rounded-full"
+          >
+            <Route size={16} />
+            <span>Navigate</span>
+          </Link>
+        </div>
+        
         {/* Floor selector */}
         <FloorSelector 
           floors={floors} 
@@ -75,7 +88,7 @@ const ParkingDetails = () => {
         />
         
         {/* Parking visualization */}
-        <div className="bg-white rounded-lg border border-gray-200 h-[500px] mb-6">
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm h-[500px] mb-6">
           <ParkingMap 
             slots={parkingSlots}
             selectedSlot={selectedSlot}
@@ -84,17 +97,23 @@ const ParkingDetails = () => {
         </div>
         
         {/* Legend */}
-        <div className="flex flex-wrap justify-center gap-6 mb-8">
+        <div className="flex flex-wrap justify-center gap-6 mb-8 bg-white p-4 rounded-xl shadow-sm">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-3 bg-blue-400 border border-blue-500 rounded"></div>
+            <div className="w-5 h-3 bg-blue-400 border border-blue-500 rounded flex items-center justify-center">
+              <Car size={8} className="text-white" />
+            </div>
             <span className="text-sm text-gray-600">Available</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-5 h-3 bg-gray-400 border border-gray-500 rounded"></div>
+            <div className="w-5 h-3 bg-gray-400 border border-gray-500 rounded flex items-center justify-center">
+              <Car size={8} className="text-white" />
+            </div>
             <span className="text-sm text-gray-600">Occupied</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-5 h-3 bg-yellow-400 border border-yellow-500 rounded"></div>
+            <div className="w-5 h-3 bg-yellow-400 border border-yellow-500 rounded flex items-center justify-center">
+              <Car size={8} className="text-white" />
+            </div>
             <span className="text-sm text-gray-600">Booking</span>
           </div>
         </div>
@@ -102,7 +121,7 @@ const ParkingDetails = () => {
         {/* Continue button */}
         <Button 
           onClick={handleContinue}
-          className="w-full bg-srm-blue hover:bg-srm-darkblue text-white rounded-full py-6"
+          className="w-full bg-srm-blue hover:bg-srm-darkblue text-white rounded-full py-6 shadow-md"
         >
           Continue
         </Button>

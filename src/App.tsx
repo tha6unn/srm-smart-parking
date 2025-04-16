@@ -9,6 +9,7 @@ import SplashScreen from "./pages/SplashScreen";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import ParkingDetails from "./pages/ParkingDetails";
+import BlockNavigation from "./pages/BlockNavigation";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,8 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/parking/:blockId" element={<ParkingDetails />} />
           <Route path="/parking" element={<ParkingDetails />} />
+          <Route path="/navigation/:blockId" element={<BlockNavigation />} />
+          <Route path="/navigation" element={<BlockNavigation />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
