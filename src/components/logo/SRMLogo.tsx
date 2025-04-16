@@ -13,7 +13,7 @@ const SRMLogo: React.FC<LogoProps> = ({
 }) => {
   const sizeClasses = {
     sm: 'h-8',
-    md: 'h-12',
+    md: 'h-14',
     lg: 'h-15',
   };
 
@@ -22,7 +22,7 @@ const SRMLogo: React.FC<LogoProps> = ({
   return (
     <div
       className={`flex justify-center items-center w-full ${className}`}
-      style={{ minHeight: size === 'sm' ? '2rem' : size === 'lg' ? '3rem' : '2rem' }}
+      style={{ minHeight: size === 'sm' ? '4rem' : size === 'lg' ? '6rem' : '4rem' }}
     >
       <div className={`relative flex items-center ${sizeClasses[size]}`}>
         {/* Logo Image */}
