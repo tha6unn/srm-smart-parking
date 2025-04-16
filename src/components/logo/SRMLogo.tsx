@@ -32,9 +32,8 @@ const SRMLogo: React.FC<LogoProps> = ({
             alt="SRM Parking" 
             className={`object-contain ${sizeClasses[size]} h-auto`}
             onError={(e) => {
-              // If image fails to load, show the text version
+              // Explicitly cast to HTMLElement to access style property
               e.currentTarget.style.display = 'none';
-              // Cast to HTMLElement to access style property
               const textElement = e.currentTarget.nextElementSibling as HTMLElement;
               if (textElement) {
                 textElement.style.display = 'flex';
