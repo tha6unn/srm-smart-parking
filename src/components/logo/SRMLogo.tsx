@@ -21,7 +21,7 @@ const SRMLogo: React.FC<LogoProps> = ({
 
   return (
     <div
-      className={`flex items-center ${className}`}
+      className={`flex justify-center items-center w-full ${className}`}
       style={{ minHeight: size === 'sm' ? '2rem' : size === 'lg' ? '4rem' : '3rem' }}
     >
       <div className={`relative flex items-center ${sizeClasses[size]}`}>

@@ -25,7 +25,7 @@ const Dashboard = () => {
     },
     {
       id: '3',
-      name: 'Engineering Block',
+      name: 'Tech Park Avenue',
       totalSlots: 80,
       occupiedSlots: 35,
       status: 'available'
@@ -39,7 +39,7 @@ const Dashboard = () => {
     },
     {
       id: '5',
-      name: 'Science Block',
+      name: 'Tech park ground',
       totalSlots: 60,
       occupiedSlots: 20,
       status: 'available'

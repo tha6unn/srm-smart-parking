@@ -16,7 +16,7 @@ const ParkingDetails = () => {
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const { toast } = useToast();
 
-  const floors = ['1st Floor', '2nd Floor', '3rd Floor'];
+  const floors = ['1st Lane', '2nd Lane', '3rd Lane'];
 
   // Sample parking slots data
   const parkingSlots: ParkingSlot[] = [
