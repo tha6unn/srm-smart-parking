@@ -20,7 +20,7 @@ const SplashScreen = () => {
       <div className="w-full max-w-md mx-auto text-center">
         {/* Logo */}
         <div className="mb-6">
-          <SRMLogo size="hg" className="mb-4" />
+          <SRMLogo size="hg"/>
         </div>
         
         {/* Tagline */}
