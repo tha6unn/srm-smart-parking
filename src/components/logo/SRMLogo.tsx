@@ -34,7 +34,11 @@ const SRMLogo: React.FC<LogoProps> = ({
             onError={(e) => {
               // If image fails to load, show the text version
               e.currentTarget.style.display = 'none';
-              e.currentTarget.nextElementSibling!.style.display = 'flex';
+              // Cast to HTMLElement to access style property
+              const textElement = e.currentTarget.nextElementSibling as HTMLElement;
+              if (textElement) {
+                textElement.style.display = 'flex';
+              }
             }}
           />
           
