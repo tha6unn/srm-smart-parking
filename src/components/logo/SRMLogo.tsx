@@ -1,5 +1,6 @@
 
 import React from 'react';
+import logoImage from '/lovable-uploads/77eac982-b6bc-411c-9fd2-9d00d9b932aa.png';
 
 interface LogoProps {
   className?: string;
@@ -17,15 +18,16 @@ const SRMLogo: React.FC<LogoProps> = ({
     md: "h-12",
     lg: "h-16"
   };
-  
-  const textColor = variant === "white" ? "text-white" : "text-srm-blue";
+
+  const imageClasses = `object-contain ${sizeClasses[size]} ${className}`;
 
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className={`font-bold ${sizeClasses[size]} flex items-center`}>
-        <span className={`text-2xl md:text-3xl lg:text-4xl ${textColor} tracking-tight`}>SRM</span>
-        <span className={`text-xs md:text-sm lg:text-base ml-1 ${textColor} opacity-90`}>PARKING</span>
-      </div>
+    <div className="flex items-center justify-center">
+      <img 
+        src={logoImage} 
+        alt="SRM Institute of Science & Technology" 
+        className={imageClasses}
+      />
     </div>
   );
 };
