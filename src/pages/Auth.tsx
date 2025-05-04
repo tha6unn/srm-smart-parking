@@ -1,7 +1,7 @@
 
 import React from 'react';
-import AuthForm from '@/components/auth/AuthForm';
-import SRMLogo from '@/components/logo/SRMLogo';
+import AuthForm from '@/frontend/components/auth/AuthForm';
+import SRMLogo from '@/frontend/components/logo/SRMLogo';
 
 const Auth = () => {
   return (
