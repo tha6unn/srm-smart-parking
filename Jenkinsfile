@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/tha6unn/srm-smart-parking.git'
+        git branch: 'dev', // Replace with your branch name
+          url: 'https://github.com/tha6unn/srm-smart-parking.git'
       }
     }
     stage('Install Dependencies') {
