@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'dev', // Replace with your branch name
+        git branch: 'main', 
           url: 'https://github.com/tha6unn/srm-smart-parking.git'
       }
     }
@@ -15,12 +15,12 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm run test'  # Replace with your test command (e.g., `npm test`)
+        sh 'npm run test'  
       }
     }
     stage('Build') {
       steps {
-        sh 'npm run build'  # Build your React app
+        sh 'npm run build'
       }
     }
   }
