@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools { nodejs "NodeJS-18" }
+  tools { nodejs "NodeJS" }
   stages {
     stage('Checkout') {
       steps {
@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm run test'  
+        sh 'npm run test'
       }
     }
     stage('Build') {
